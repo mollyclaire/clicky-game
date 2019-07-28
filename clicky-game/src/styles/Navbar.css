@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    background-color: #555555;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    color: whitesmoke;
+}
