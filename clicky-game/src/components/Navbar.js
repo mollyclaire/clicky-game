@@ -1,31 +1,22 @@
 import React from "react";
 import "../styles/Navbar.css";
 
-// const styles = {
-//   backgroundColor: "#555555",
-//   display: "flex",
-//   justifyContent: "space-between",
-//   alignItems: "center",
-//   color: "white"
+function Navbar(props) {
 
-// }
-
-function Navbar() {
   return (
     <nav className="navbar">
-      <ul className="navbar-nav">
-        <li className="logo">
-            <a className="nav-link" href="/">Clicky Game</a>
+      <span className="navbar-brand" href="/">Clicky Game</span>
+      <ul className="nav navbar-nav ml-auto">
+        <li className="nav-item">
+            <span className="message">{props.message}</span>
         </li>
-        {/* <li className="nav-item active">
-            <a className="nav-link" href="/">Click on any image to begin</a>
-        </li> */}
-        <li className="nav-item active">
-            <a className="nav-link" href="/">Your Score: </a>
+        <li className="nav-item">
+            <span className="score">Your Score: {props.score}</span>
         </li>
       </ul>
     </nav>
   );
-}
+  }
+
 
 export default Navbar;
