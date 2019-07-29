@@ -17,11 +17,11 @@ function Navbar() {
         <li className="logo">
             <a className="nav-link" href="/">Clicky Game</a>
         </li>
-        <li className="nav-item active">
+        {/* <li className="nav-item active">
             <a className="nav-link" href="/">Click on any image to begin</a>
-        </li>
+        </li> */}
         <li className="nav-item active">
-            <a className="nav-link" href="/">Score</a>
+            <a className="nav-link" href="/">Your Score: </a>
         </li>
       </ul>
     </nav>

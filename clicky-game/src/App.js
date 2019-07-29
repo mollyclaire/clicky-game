@@ -1,31 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+// import React from 'react';
+import React, { Component } from "react";
+// import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
 import Jumbotron from "./components/Jumbotron";
+import art from "./cards.json";
+import Row from 'react-bootstrap/Row';
 
-function App() {
+class App extends Component {
+  // Setting this.state.pups to the cards json array
+  state = {
+    art,
+    clickedArtworks: [],
+    score: 0,
+    goal: 12,
+    status: ""
+  };
+
+render() {
   return (
     <div className="App">
       <Navbar />
       <Jumbotron />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <div className="container">
+        <Row>
+        {this.state.art.map(item => (
+              <Card
+                shuffleScoreCard={this.shuffleScoreCard}
+                id={item.id}
+                key={item.id}
+                image={item.image}
+              />
+            ))}
+        </Row>
+      </div>
     </div>
   );
 }
-
+};
 export default App;
