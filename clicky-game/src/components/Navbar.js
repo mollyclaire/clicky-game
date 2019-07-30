@@ -6,11 +6,11 @@ function Navbar(props) {
   return (
     <nav className="navbar">
       <span className="navbar-brand" href="/">Clicky Game</span>
-      <ul className="nav navbar-nav ml-auto">
+      <ul className="nav navbar-nav">
         <li className="nav-item">
-            <span className="message">{props.message}</span>
+            <span className="message"><strong>{props.message}</strong></span>
         </li>
-        <li className="nav-item">
+        <li className="nav-item" id="score">
             <span className="score">Your Score: {props.score}</span>
         </li>
       </ul>
