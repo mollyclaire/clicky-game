@@ -17,7 +17,7 @@ class App extends Component {
     goal: 12,
     message: ""
   };
-  // The shuffleArt method takes in an id and compares that id with one that is stored in the clickedArtworks array.
+  // The shuffleArt method compares the id of the clicked image with one that is stored in the clickedArtworks array.
   shuffleArt = id => {
     let clickedArtworks = this.state.clickedArtworks;
 

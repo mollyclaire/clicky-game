@@ -1,7 +1,9 @@
 .navbar {
     flex-direction: row;
     background-color: #555555;
-  }
+}
+
+
 
 span {
     color: whitesmoke;
